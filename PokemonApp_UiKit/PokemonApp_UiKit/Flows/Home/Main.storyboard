@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="HomeView" id="Y6W-OH-hqX" customClass="HomeView" customModule="PokemonApp_UiKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_back" translatesAutoresizingMaskIntoConstraints="NO" id="0Pg-kU-TjU">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5xn-tx-61P">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Atrapa tu PoKemón" translatesAutoresizingMaskIntoConstraints="NO" id="Ofz-Pm-X2a">
+                                        <rect key="frame" x="40" y="30" width="313" height="56"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="alphabet" textContentType="name"/>
+                                        <scopeButtonTitles>
+                                            <string>Title</string>
+                                            <string>Title</string>
+                                        </scopeButtonTitles>
+                                        <connections>
+                                            <outlet property="delegate" destination="Y6W-OH-hqX" id="rC2-0D-CbC"/>
+                                        </connections>
+                                    </searchBar>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" indicatorStyle="white" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jiL-Hu-2TZ">
+                                        <rect key="frame" x="30" y="116" width="333" height="623"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="Y6W-OH-hqX" id="hEN-QH-4Lv"/>
+                                            <outlet property="delegate" destination="Y6W-OH-hqX" id="Mxd-IP-cqq"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="jiL-Hu-2TZ" firstAttribute="top" secondItem="Ofz-Pm-X2a" secondAttribute="bottom" constant="30" id="9UQ-k9-caE"/>
+                                    <constraint firstAttribute="bottom" secondItem="jiL-Hu-2TZ" secondAttribute="bottom" constant="20" id="F9i-bD-Cfl"/>
+                                    <constraint firstAttribute="trailing" secondItem="jiL-Hu-2TZ" secondAttribute="trailing" constant="30" id="IWR-Ej-5MP"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ofz-Pm-X2a" secondAttribute="trailing" constant="40" id="TYo-cL-Q6B"/>
+                                    <constraint firstItem="Ofz-Pm-X2a" firstAttribute="leading" secondItem="5xn-tx-61P" secondAttribute="leading" constant="40" id="ZVy-Nh-I6y"/>
+                                    <constraint firstItem="Ofz-Pm-X2a" firstAttribute="top" secondItem="5xn-tx-61P" secondAttribute="top" constant="30" id="bFn-wZ-B9M"/>
+                                    <constraint firstItem="jiL-Hu-2TZ" firstAttribute="leading" secondItem="5xn-tx-61P" secondAttribute="leading" constant="30" id="lg2-4A-ONs"/>
+                                </constraints>
+                            </view>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="SEB-je-dbX">
+                                <rect key="frame" x="138" y="59" width="37" height="37"/>
+                                <color key="color" name="AccentColor"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cargando..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PVP-22-iMp">
+                                <rect key="frame" x="195" y="67" width="94" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="PVP-22-iMp" firstAttribute="centerY" secondItem="SEB-je-dbX" secondAttribute="centerY" id="1vQ-bJ-7Jw"/>
+                            <constraint firstAttribute="bottom" secondItem="0Pg-kU-TjU" secondAttribute="bottom" id="59H-Vz-ZxC"/>
+                            <constraint firstItem="5xn-tx-61P" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="6GQ-jq-jk5"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="5xn-tx-61P" secondAttribute="bottom" id="6K9-q0-hor"/>
+                            <constraint firstItem="SEB-je-dbX" firstAttribute="trailing" secondItem="PVP-22-iMp" secondAttribute="leading" constant="-20" id="JDj-yf-70C"/>
+                            <constraint firstItem="0Pg-kU-TjU" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="Qv3-YH-jrk"/>
+                            <constraint firstItem="SEB-je-dbX" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" constant="-40" id="XUp-wQ-4cP"/>
+                            <constraint firstItem="SEB-je-dbX" firstAttribute="top" secondItem="5xn-tx-61P" secondAttribute="top" id="dg3-b2-lTa"/>
+                            <constraint firstItem="5xn-tx-61P" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="jMs-n1-VxM"/>
+                            <constraint firstAttribute="trailing" secondItem="0Pg-kU-TjU" secondAttribute="trailing" id="w2m-ic-xqr"/>
+                            <constraint firstItem="0Pg-kU-TjU" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="yT9-Dl-ny5"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="5xn-tx-61P" secondAttribute="trailing" id="zjy-mQ-6fO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loadingLabel" destination="PVP-22-iMp" id="JdL-N4-FeV"/>
+                        <outlet property="pokemonSearchBar" destination="Ofz-Pm-X2a" id="CCZ-7a-c5t"/>
+                        <outlet property="pokemonTableView" destination="jiL-Hu-2TZ" id="ojb-k1-SEu"/>
+                        <outlet property="searchBar" destination="Ofz-Pm-X2a" id="Jkd-lD-0NY"/>
+                        <outlet property="spinnerView" destination="SEB-je-dbX" id="CA4-sM-LQG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.53435114503816" y="-34.507042253521128"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="img_back" width="1963" height="3334"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="95" id="KGk-i7-Jjw" customClass="PokemonTableViewCell" customModule="PokemonApp_UiKit" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="95"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="95"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s2i-WJ-oAz">
+                        <rect key="frame" x="10" y="10" width="300" height="70"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bulbasour" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j3S-zv-vSf">
+                                <rect key="frame" x="90" y="10" width="190" height="50"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="25"/>
+                                <color key="textColor" systemColor="systemOrangeColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WSu-6R-bgV">
+                                <rect key="frame" x="20" y="10" width="50" height="50"/>
+                                <color key="tintColor" systemColor="systemMintColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="1zj-d7-rUh"/>
+                                    <constraint firstAttribute="height" constant="50" id="76b-V3-fXz"/>
+                                </constraints>
+                                <imageReference key="image" image="ico_pokeball" symbolScale="large"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="j3S-zv-vSf" secondAttribute="bottom" constant="10" id="0LK-10-Npx"/>
+                            <constraint firstItem="WSu-6R-bgV" firstAttribute="leading" secondItem="s2i-WJ-oAz" secondAttribute="leading" constant="20" id="GjJ-1I-roa"/>
+                            <constraint firstAttribute="bottom" secondItem="WSu-6R-bgV" secondAttribute="bottom" constant="10" id="Iec-Id-Pkx"/>
+                            <constraint firstItem="j3S-zv-vSf" firstAttribute="top" secondItem="s2i-WJ-oAz" secondAttribute="top" constant="10" id="N1x-Wq-dhf"/>
+                            <constraint firstItem="j3S-zv-vSf" firstAttribute="leading" secondItem="WSu-6R-bgV" secondAttribute="trailing" constant="20" id="NXV-35-qgq"/>
+                            <constraint firstItem="WSu-6R-bgV" firstAttribute="top" secondItem="s2i-WJ-oAz" secondAttribute="top" constant="10" id="ZPE-qG-een"/>
+                            <constraint firstItem="j3S-zv-vSf" firstAttribute="centerY" secondItem="WSu-6R-bgV" secondAttribute="centerY" id="bon-tK-aYK"/>
+                            <constraint firstAttribute="trailing" secondItem="j3S-zv-vSf" secondAttribute="trailing" constant="20" id="ffT-ic-Izk"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="s2i-WJ-oAz" secondAttribute="bottom" constant="10" id="FqG-rL-9kC"/>
+                    <constraint firstItem="s2i-WJ-oAz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="P7K-S8-g2L"/>
+                    <constraint firstAttribute="trailing" secondItem="s2i-WJ-oAz" secondAttribute="trailing" constant="10" id="Pox-7d-kZe"/>
+                    <constraint firstItem="s2i-WJ-oAz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="cQY-CY-eg5"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="boxView" destination="s2i-WJ-oAz" id="PgW-rA-dfZ"/>
+                <outlet property="pokemonIco" destination="WSu-6R-bgV" id="2qE-sn-OUJ"/>
+                <outlet property="pokemonName" destination="j3S-zv-vSf" id="Cbt-qk-EfG"/>
+            </connections>
+            <point key="canvasLocation" x="22.900763358778626" y="-5.9859154929577469"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ico_pokeball" width="1920" height="1920"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
