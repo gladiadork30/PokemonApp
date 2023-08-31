@@ -55,11 +55,11 @@
                                 </constraints>
                             </view>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="SEB-je-dbX">
-                                <rect key="frame" x="138" y="59" width="37" height="37"/>
+                                <rect key="frame" x="128" y="59" width="37" height="37"/>
                                 <color key="color" name="AccentColor"/>
                             </activityIndicatorView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cargando..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PVP-22-iMp">
-                                <rect key="frame" x="195" y="67" width="94" height="21"/>
+                                <rect key="frame" x="185" y="67" width="94" height="21"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" name="AccentColor"/>
                                 <nil key="highlightedColor"/>
@@ -74,7 +74,7 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="5xn-tx-61P" secondAttribute="bottom" id="6K9-q0-hor"/>
                             <constraint firstItem="SEB-je-dbX" firstAttribute="trailing" secondItem="PVP-22-iMp" secondAttribute="leading" constant="-20" id="JDj-yf-70C"/>
                             <constraint firstItem="0Pg-kU-TjU" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="Qv3-YH-jrk"/>
-                            <constraint firstItem="SEB-je-dbX" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" constant="-40" id="XUp-wQ-4cP"/>
+                            <constraint firstItem="SEB-je-dbX" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" constant="-50" id="XUp-wQ-4cP"/>
                             <constraint firstItem="SEB-je-dbX" firstAttribute="top" secondItem="5xn-tx-61P" secondAttribute="top" id="dg3-b2-lTa"/>
                             <constraint firstItem="5xn-tx-61P" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="jMs-n1-VxM"/>
                             <constraint firstAttribute="trailing" secondItem="0Pg-kU-TjU" secondAttribute="trailing" id="w2m-ic-xqr"/>

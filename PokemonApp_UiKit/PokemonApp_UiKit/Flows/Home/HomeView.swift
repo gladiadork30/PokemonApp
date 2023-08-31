@@ -51,7 +51,7 @@ extension HomeView: HomeViewProtocol {
     func setSpinner(show: Bool) {
         DispatchQueue.main.async { [weak self] in
             self?.searchBar.isUserInteractionEnabled = !show
-            self?.pokemonTableView.isUserInteractionEnabled = !show
+//            self?.pokemonTableView.isUserInteractionEnabled = !show
             self?.loadingLabel.isHidden = !show
             if show {
                 self?.spinnerView.startAnimating()

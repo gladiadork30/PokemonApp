@@ -42,9 +42,9 @@ extension HomePresenter: HomePresenterProtocol {
     
     func getPokeImages() {
         Task {
-            for index in 0..<pokemonList.count {
-                pokemonList[index].pokemonImg = await interactor?.getPokemonImg(pokemonName: pokemonList[index].name)
-                pokemonListCopy[index].pokemonImg = pokemonList[index].pokemonImg
+            for index in 0..<pokemonListCopy.count {
+                pokemonListCopy[index].pokemonImg = await interactor?.getPokemonImg(pokemonName: pokemonListCopy[index].name)
+                pokemonList[index].pokemonImg = pokemonListCopy[index].pokemonImg
                 view?.updateTableView(index)
             }
             view?.setSpinner(show: false)
